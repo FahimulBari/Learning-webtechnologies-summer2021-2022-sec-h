@@ -5,6 +5,7 @@
 		$gender = isset($_POST['gender']) ? $_POST['gender'] : "";
 		$dob = isset($_POST['dob']) ? $_POST['dob'] : ""; 
 		$degree = isset($_POST['degree']) ? $_POST['degree'] : ""; 
+		$bloodGroup = isset($_POST['bloodGroup']) ? $_POST['bloodGroup'] : ""; 
 
 
 		if(empty($username) 
@@ -32,5 +33,8 @@
         else echo "Successful <br>";
 
         if(empty($degree)) echo "Degree is null <br>";
+        else echo "Successful <br>";
+
+        if(empty($bloodGroup)) echo "BloodGroup is null <br>";
         else echo "Successful <br>";
 ?>
