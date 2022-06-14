@@ -1,0 +1,37 @@
+<html>
+<head>
+	<title>Login Page</title>
+</head>
+<body>
+
+	<form action="login.php" method="post">
+		<label for="lusername">Name</label>
+		<input type="text" name="username" id="lusername"><br><br>
+
+		<label for="lemail">Email</label>
+		<input type="text" name="email" id="lemail"><br><br>
+
+		<label>Gender</label>
+		<input type="radio" name="gender" id="male">
+		<label for="male">Male</label>
+		<input type="radio" name="gender" id="female">
+		<label for="female">Female</label>
+		<input type="radio" name="gender" id="other">
+		<label for="female">Other</label><br><br>
+
+		<label>Date Of Birth</label>
+        <input type="date" name="dob"><br><br>
+
+        <label>Degree</label>
+        <input type="checkbox" name="degree" id="ssc" value="ssc">
+        <label for="ssc">SSC</label>
+        <input type="checkbox" name="degree" id="hsc" value="hsc">
+        <label for="hsc">HSC</label>
+        <input type="checkbox" name="degree" id="bsc" value="bsc">
+        <label for="bsc">BSC</label>
+
+		<input type="submit" name="submit" value="Login"><br>
+	</form>
+
+</body>
+</html>
