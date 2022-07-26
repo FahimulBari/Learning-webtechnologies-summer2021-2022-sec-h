@@ -1,0 +1,10 @@
+Js
+es6
+Asyncronous
+Promise
+Use (let)
+let student = (a,b) => a+b;
+document.write('test');
+let head = document.getElementByTagName('h1')[0];
+head.innerHTML = "My Js Example";
+<input type ="button" name = "" value = "click" onclick = "Func()"/>
