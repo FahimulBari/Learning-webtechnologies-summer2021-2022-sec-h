@@ -10,7 +10,7 @@
 	UserID: <input type="text"  id='userid' name="userid" onkeyup="validate(1,'userid','d2')">
 	<div id='d2' style="color: red"> Give Value </div><br>
 
-	Password: <input type="password"  id='password' name="password" onkeyup="validate(2,'password','d3')">
+	Password: <input type="password"  id='password' name="password" onkeyup="PasswordValidate()">
 	<div id='d3' style="color: red"> Give Value </div><br><br>
 
 	<button type="submit">Registration</button>
@@ -19,7 +19,7 @@
 	<script type="text/javascript">
 		function validate(index,inputid,colorid)
 		{
-			var storedId = document.getElementById(inputid);
+			let storedId = document.getElementById(inputid);
 			if(storedId.value=='')
 			{
               document.getElementsByTagName('div')[index].innerHTML = "Give Value";
@@ -29,6 +29,27 @@
 			{
 				document.getElementsByTagName('div')[index].innerHTML = "Accepted";
 				document.getElementById(colorid).style.color = "green";
+			}
+		}
+
+
+		function PasswordValidate()
+		{
+			let storedId = document.getElementById('password');
+			if(storedId.value =='')
+			{
+              document.getElementsByTagName('div')[2].innerHTML = "Give Value";
+              document.getElementById('d3').style.color = "red";
+			}
+			else if(storedId.value.length < 8)
+			{
+				document.getElementsByTagName('div')[2].innerHTML = "Must Be 8 Charecter";
+				document.getElementById('d3').style.color = "red";
+			}
+			else
+			{
+				document.getElementsByTagName('div')[2].innerHTML = "Accepted";
+				document.getElementById('d3').style.color = "green";
 			}
 		}
 	</script>
