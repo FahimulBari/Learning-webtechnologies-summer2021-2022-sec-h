@@ -4,11 +4,34 @@
 </head>
 <body>
 <form method="post" action="registration.php">
-	Username: <input type="text" name="username"><br>
-	UserID: <input type="text" name="userid"><br>
-	Password: <input type="password" name="password"><br><br>
+	Username: <input type="text" id='username' name="username" onkeyup="validate(0,'username','d1')"> 
+	<div id='d1' style="color: red"> Give Value </div><br>
+
+	UserID: <input type="text"  id='userid' name="userid" onkeyup="validate(1,'userid','d2')">
+	<div id='d2' style="color: red"> Give Value </div><br>
+
+	Password: <input type="password"  id='password' name="password" onkeyup="validate(2,'password','d3')">
+	<div id='d3' style="color: red"> Give Value </div><br><br>
+
 	<button type="submit">Registration</button>
 	<a href="login.html">Login</a>
+
+	<script type="text/javascript">
+		function validate(index,inputid,colorid)
+		{
+			var storedId = document.getElementById(inputid);
+			if(storedId.value=='')
+			{
+              document.getElementsByTagName('div')[index].innerHTML = "Give Value";
+              document.getElementById(colorid).style.color = "red";
+			}
+			else
+			{
+				document.getElementsByTagName('div')[index].innerHTML = "Accepted";
+				document.getElementById(colorid).style.color = "green";
+			}
+		}
+	</script>
 </form>
 </body>
 </html>
