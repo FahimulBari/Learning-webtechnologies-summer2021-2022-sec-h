@@ -1,0 +1,58 @@
+<html>
+<head>
+	<title>Registration</title>
+</head>
+<body>
+<form method="post" action="registration.php">
+	Username: <input type="text" id='username' name="username" onkeyup="validate(0,'username','d1')"> 
+	<div id='d1' style="color: red"> Give Value </div><br>
+
+	UserID: <input type="text"  id='userid' name="userid" onkeyup="validate(1,'userid','d2')">
+	<div id='d2' style="color: red"> Give Value </div><br>
+
+	Password: <input type="password"  id='password' name="password" onkeyup="PasswordValidate()">
+	<div id='d3' style="color: red"> Give Value </div><br><br>
+
+	<button type="submit">Registration</button>
+	<a href="login.html">Login</a>
+
+	<script type="text/javascript">
+		function validate(index,inputid,colorid)
+		{
+			let storedId = document.getElementById(inputid);
+			if(storedId.value=='')
+			{
+              document.getElementsByTagName('div')[index].innerHTML = "Give Value";
+              document.getElementById(colorid).style.color = "red";
+			}
+			else
+			{
+				document.getElementsByTagName('div')[index].innerHTML = "Accepted";
+				document.getElementById(colorid).style.color = "green";
+			}
+		}
+
+
+		function PasswordValidate()
+		{
+			let storedId = document.getElementById('password');
+			if(storedId.value =='')
+			{
+              document.getElementsByTagName('div')[2].innerHTML = "Give Value";
+              document.getElementById('d3').style.color = "red";
+			}
+			else if(storedId.value.length < 8)
+			{
+				document.getElementsByTagName('div')[2].innerHTML = "Must Be 8 Charecter";
+				document.getElementById('d3').style.color = "red";
+			}
+			else
+			{
+				document.getElementsByTagName('div')[2].innerHTML = "Accepted";
+				document.getElementById('d3').style.color = "green";
+			}
+		}
+	</script>
+</form>
+</body>
+</html>
