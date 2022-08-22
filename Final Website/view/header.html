@@ -1,0 +1,85 @@
+<nav>
+	<div class="nav-user">
+		<h1 style="margin-bottom: 5px;"><a href="home.php">Home</a></h1>
+		<h4 style="margin-top: 10px;"><a href="password.php">Change Password</a></h4>
+	</div>
+	<div class="nav-menu">
+		<ul>		
+			<li><a href="#">Course</a>
+				<ul class="sub-menu">		
+					<li><a href="course.php">Content</a></li>
+					<li><a href="result.php">Result</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Others</a>
+				<ul class="sub-menu">		
+					<li><a href="major.php">Major Declare</a></li>
+					<li><a href="facilities.php">Facilities</a></li>
+					<li><a href="library.php">Library</a></li>
+					<li><a href="form.php">Form</a></li>
+				</ul>
+			</li>
+			<li class="logout"><a href="../controller/logout.php">Logout</a></li>
+		</ul>
+	</div>
+</nav>
+
+<style>
+
+nav{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: rgba(0, 0, 0, 0.75);
+	color: white;
+	height: 75px;
+}
+
+nav > .nav-menu > ul{
+	list-style: none;
+	display: flex;
+}
+
+nav > .nav-menu li a {
+	display: block;
+	padding: 20px 25px;
+ 	text-decoration: none;
+ 	color: white;
+}
+
+nav > .nav-user a{
+	padding: 5px 0px;
+	padding-left: 10px;
+	text-decoration: none;
+	color: white;
+}
+
+nav > .nav-menu .logout a{
+	background: rgb(161 0 0);
+	padding: 10px 30px;
+	margin-Top: 10px;
+	margin-right: 10px;
+	box-sizing: border-box;
+	border-radius: 35px;
+}
+
+nav .sub-menu{
+	display: none;
+	position: absolute;
+	background: rgba(0, 0, 0, 0.75);
+}
+
+nav > .nav-menu ul li:hover .sub-menu, .sub-menu li{
+	display: block;
+	background: rgba(0, 0, 0, 0.75);
+}
+
+nav > .nav-menu ul li:hover .sub-menu li:hover{
+	background: rgba(255, 255, 255, 0.75);
+}
+
+nav > .nav-menu ul li:hover .sub-menu li a:hover{
+	color: black;
+}
+
+</style>

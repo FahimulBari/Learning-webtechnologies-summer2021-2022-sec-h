@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="view/style.css">
+	<script src="controller/validation.js"></script>
+	<title>Registration</title>
+</head>
+<body>
+<form class="centralize box" method="post" action="model/insert-user.php" onsubmit="return ValidationChecker()">
+	<h1 class="title">Registration</h1>
+	<input id="username" type="text" name="username" placeholder="Username" onkeyup="UsernameValidation()">
+	<h4 id="username-warning" style="color: red"></h4>
+	<input id="password" type="password" name="password" placeholder="Password" onkeyup="PasswordValidation()">
+	<h4 id="password-warning" style="color: red"></h4>
+	<button type="submit">Submit</button>
+	<h3 style="margin-top: 15px;">Already Have An Account? <a href="View/login.html">Login</a></h3>
+</form>
+</body>
+</html>
